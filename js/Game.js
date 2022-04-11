@@ -175,7 +175,7 @@ class Game {
           this.handleFuel(index);
           this.handlePowerCoins(index);
           this.handleObstacleCollision(index);
-          this.handlePlayerControls(index); //C41//SA
+          this.handleCarCollision(index); //C41//SA
           if (player.life <= 0) {
             this.blast = true;
             this.playerMoving = false;
@@ -368,8 +368,6 @@ class Game {
         player.update(); 
       
       }
-      end();
-      console.log('gameOver')
     }
   }
   handleObstacleCollision(index) {
@@ -410,5 +408,9 @@ class Game {
       imageSize: "100x100",
       confirmButtonText: "Obrigado por jogar"
     });
+  }
+  end(){
+    end();
+      console.log('gameOver')
   }
 }
